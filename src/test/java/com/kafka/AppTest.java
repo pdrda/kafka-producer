@@ -28,7 +28,7 @@ public class AppTest {
 		while(i<=1000000){
 			System.out.println("----"+i);
 			Random rnd = new Random();
-			String ip = "5131.168.2.----:" + i;
+			String ip = "5131.168.12.----:" + i;
 			String sms = "{'newIP':'"+ip+"'";
 //			String sms = "{'originIP':'"+ip+"','phoneContent':'nihao','phoneNumber':'18010101010','token':'token'}";
 			KafkaConsumerChannel kafkaSource = SpringContextUtils.getBean(KafkaConsumerChannel.class);
