@@ -16,6 +16,8 @@ public interface KafkaConsumerChannel {
 	@Output(KafkaConsumerChannel.phone_ms_topic_name)
 	MessageChannel PHONE_MS_OUTPUT(); 
 	
+	@Input(KafkaConsumerChannel.phone_ms_topic_name)
+	SubscribableChannel PHONE_MS_INTPUT(); 
 	
 	
 }
