@@ -30,7 +30,7 @@ public class AppTest {
 			Random rnd = new Random();
 			String ip = "5131.168.2.----:" + i;
 			String sms = "{'newIP':'"+ip+"'";
-//			String sms = "{'originIP':'"+ip+"','phoneContent':'尊敬的用户您好，您提交的项目有供应商投标，请登录通力平台网站查看。【通力平台】','phoneNumber':'18010101010','token':'tl_tonelink_win_token'}";
+//			String sms = "{'originIP':'"+ip+"','phoneContent':'nihao','phoneNumber':'18010101010','token':'token'}";
 			KafkaConsumerChannel kafkaSource = SpringContextUtils.getBean(KafkaConsumerChannel.class);
 			kafkaSource.PHONE_MS_OUTPUT().send(MessageBuilder.withPayload(sms.getBytes()).build());
 			i++;
